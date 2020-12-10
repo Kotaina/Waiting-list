@@ -24,4 +24,5 @@ sendRequest ('GET', requestURL)
     console.log(data);
     usersData.push(data);
   })
-  .catch(err => console.log(err))
+  .catch(err => console.log(err));
+  
