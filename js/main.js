@@ -9,4 +9,4 @@ if (!isPopupFormOpen) {
 }
 
 
-newUserBtn.addEventListener('click', () => onNewUserBtnClick)
+newUserBtn.addEventListener('click', () => isPopupFormOpen = !isPopupFormOpen)
