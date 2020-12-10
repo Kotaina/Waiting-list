@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Waiting list</title>
+</head>
+
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+  
+  <section class="users">
+    <h1 class="users__title">Waiting list</h1>
+    <button class="users__new">Добавить</button>
+    <ul class="users__list user">
+      
+    </ul>
+  </section>
+  
+  <div id="card-template">
+    <li class="user__card user">
+      <h3 class="user__name" id=""></h3>
+      <span class="user__email"></span>
+      <span class="user__city"></span>
+      <span class="user__phone"></span>
+    </li>
+  </div>
+  
+     <footer class="main-footer">
+        <ul class="main-footer__social link">
+            <li class="link__item link__item--git"> <a href="https://github.com/Kotaina">
+                    <svg class="svg-github" width="30" height="30">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="link__item link__item--habr"> <a href="https://career.habr.com/kotaina">
+                    <svg class="svg-habr" width="30" height="30">
+                        <use xlink:href="#icon-habr"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="link__item link__item--telegram"> <a href="tg://resolve?domain=Porvilo">
+                    <svg class="svg-telegram" width="10" height="20">
+                        <use xlink:href="#icon-telegram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="link__item link__item--hh"> <a
+                    href="https://hh.ru/resume/7397dcecff07f1284a0039ed1f794232354471">
+                    <svg class="svg-hh" width="20" height="20">
+                        <use xlink:href="#icon-hh"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </footer>
+  
+  <section class="add-user">
+    <h2 class="add-user__title">Новый пользователь</h2>
+    <form class="add-user__form form">
+      <label class="form__name">
+        <span>Имя: </span>
+        <input type="text" placeholder="Вася Пупкин"/>
+      </label>
+      <label class="form__email">
+        <span>Email: </span>
+        <input type="text" id="#email"/>
+      </label>
+      <label class="form__phone">
+        <span>Телефон: </span>
+        <input type="number" name="" id="#phone"/>
+      </label>
+      <label class="form__city">
+        <span>Город: </span>
+        <input type="text"/>
+      </label>
+      <label class="form__street">
+        <span>Улица: </span>
+        <input type="text"/>
+      </label>
+      <button class="form__buton">Отправить</button>
+    </form>
+  </section>
+  <script src="./js/main.js></script>
+</body>
+
+</html>
