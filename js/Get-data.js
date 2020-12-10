@@ -20,5 +20,8 @@ function sendRequest(method, url) {
 }
 
 sendRequest ('GET', requestURL)
-  .then(data => console.log(data))
+  .then(data => {
+    console.log(data);
+    usersData.push(data);
+  })
   .catch(err => console.log(err))
