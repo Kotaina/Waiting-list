@@ -2,7 +2,7 @@ const userTemplate = document.querySelector('#card-template');
 const usersList = document.querySelector('.users__list');
 const clientCounter = document.querySelector(".client-count");
 
-let usersData;
+// let usersData;
 
 
 let createCard = function (user) {
@@ -17,6 +17,7 @@ let createCard = function (user) {
 
 
 function renderCard(usersData) {
+  console.log("Incoming data is " + usersData)
   var fragment = document.createDocumentFragment();
   for (let i = 0; i < usersData.length; i++) {
     fragment.appendChild(createCard(usersData[i]))
@@ -65,9 +66,12 @@ function serverEmulator() {
     },
   ]
 }
+// serverEmulator();
 
-serverEmulator();
-renderCard(usersData);
+function launcher() {
+  renderCard(serverData);
+}
 
+setTimeout(launcher, 2000)
 
 clientCounter.textContent = "(" + usersData.length + ")";

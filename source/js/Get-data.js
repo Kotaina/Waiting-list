@@ -1,4 +1,6 @@
 const requestURL = 'https://jsonplaceholder.typicode.com/users';
+let serverData = [];
+let usersData = [];
 
 function sendRequest(method, url) {
   return new Promise((resolve, reject) => {
@@ -22,6 +24,6 @@ function sendRequest(method, url) {
 sendRequest('GET', requestURL)
   .then(data => {
     console.log(data);
-    usersData.push(data);
+    serverData.push(data);
   })
   .catch(err => console.log(err));
