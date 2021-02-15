@@ -1,18 +1,19 @@
 let addUserBtn = document.querySelector(".users__new");
 let popup = document.querySelector(".add-user");
+let popupCloseBtn = popup.querySelector(".add-user__button-close");
 
-isPopupOpen = false;
+let isPopupOpen;
 
-function popupToggler() {
-  if (isPopupOpen) {
-    console.log("turn on")
-    popup.classList.add("visually-hidden")
-  }
+let onPopupCloseBtnClick = function () {
+  addUserBtn.removeEventListener("click", onPopupCloseBtnClick);
+  popup.classList.add("visually-hidden");
+  addUserBtn.addEventListener("click", onAddUserBtnClick);
 }
 
-addUserBtn.addEventListener("click", function () {
-  isPopupOpen = !isPopupOpen;
-  console.log(isPopupOpen)
-})
+let onAddUserBtnClick = function () {
+  addUserBtn.removeEventListener("click", onAddUserBtnClick)
+  popupCloseBtn.addEventListener("click", onPopupCloseBtnClick)
+  popup.classList.remove("visually-hidden");
+}
 
-popupToggler()
+addUserBtn.addEventListener("click", onAddUserBtnClick)
