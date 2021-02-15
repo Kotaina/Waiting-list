@@ -1,7 +1,6 @@
 const userTemplate = document.querySelector('#card-template');
 const usersList = document.querySelector('.users__list');
 const clientCounter = document.querySelector(".client-count");
-console.log(usersList);
 
 let usersData;
 

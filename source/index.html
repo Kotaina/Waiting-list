@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Клент-лист</title>
+  <title>Клиент-лист</title>
   <svg class="svg-sprite visually-hidden" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon-github" viewBox="0 0 2350 2314.8">
       <path
@@ -38,11 +38,11 @@
 
 <body>
   <header>
-    <h1 class="main-header__title">Клиент-лист <span class="client-count"></span></h1>
+    <h1 class="main-header__title">Клиент-лист</h1>
   </header>
 
   <section class="users">
-    <h1 class="users__title">Waiting list</h1>
+    <h1 class="users__title">Количество людей в очереди <span class="client-count"></span></h1>
     <button class="users__new">Добавить</button>
     <ul class="users__list user">
 
@@ -106,31 +106,31 @@
         <li class="form__name">
           <label>
             <span>Имя: </span>
-            <input type="text" placeholder="Вася Пупкин" />
+            <input type="text" id="#name" placeholder="Вася Пупкин" />
           </label>
         </li>
         <li class="form__email">
           <label>
             <span>Email: </span>
-            <input type="text" id="#email" />
+            <input type="text" id="#email" class="new-user-email" required />
           </label>
         </li>
         <li class="form__phone">
           <label>
             <span>Телефон: </span>
-            <input type="number" name="" id="#phone" />
+            <input type="number" id="#phone" />
           </label>
         </li>
         <li class="form__city">
           <label>
             <span>Город: </span>
-            <input type="text" />
+            <input type="text" id="#city" />
           </label>
         </li>
         <li class="form__street">
           <label>
             <span>Улица: </span>
-            <input type="text" />
+            <input type="text" id="#street" />
           </label>
         </li>
       </ul>
@@ -140,6 +140,7 @@
   </section>
   <script src="./js/main.js"></script>
   <script src="./js/template-worker.js"></script>
+  <script src="./js/validator.js"></script>
 </body>
 
 </html>
