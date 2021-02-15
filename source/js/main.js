@@ -1,16 +1,18 @@
-let isPopupFormOpen = false;
-let newUserBtn = document.querySelector('.users-new');
-let newUserForm = document.querySelector('.add-user')
-let submitBtn = document.querySelector('.form__button')
+let addUserBtn = document.querySelector(".users__new");
+let popup = document.querySelector(".add-user");
 
-if (!isPopupFormOpen) {
-  newUserForm.classList.add('visually-hidden')
-} else {
-  newUserForm.classList.remove('visually-hidden')
+isPopupOpen = false;
+
+function popupToggler() {
+  if (isPopupOpen) {
+    console.log("turn on")
+    popup.classList.add("visually-hidden")
+  }
 }
 
+addUserBtn.addEventListener("click", function () {
+  isPopupOpen = !isPopupOpen;
+  console.log(isPopupOpen)
+})
 
-newUserBtn.addEventListener('click', () => isPopupFormOpen = !isPopupFormOpen)
-
-
-submitBtn.addEventListener('click', onSubmitBtnClick)
+popupToggler()

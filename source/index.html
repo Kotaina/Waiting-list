@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Waiting list</title>
+  <title>Клент-лист</title>
 </head>
 
 
 <body>
   <header>
-    <h1>Header</h1>
+    <h1 class="main-header__title">Клиент-лист</h1>
   </header>
 
   <section class="users">
@@ -62,31 +62,44 @@
 
   <section class="add-user">
     <h2 class="add-user__title">Новый пользователь</h2>
-    <form class="add-user__form form">
-      <label class="form__name">
-        <span>Имя: </span>
-        <input type="text" placeholder="Вася Пупкин" />
-      </label>
-      <label class="form__email">
-        <span>Email: </span>
-        <input type="text" id="#email" />
-      </label>
-      <label class="form__phone">
-        <span>Телефон: </span>
-        <input type="number" name="" id="#phone" />
-      </label>
-      <label class="form__city">
-        <span>Город: </span>
-        <input type="text" />
-      </label>
-      <label class="form__street">
-        <span>Улица: </span>
-        <input type="text" />
-      </label>
-      <button class="form__buton">Отправить</button>
+    <form class="add-user__form">
+      <ul class="add-user__form__form-list form">
+        <li class="form__name">
+          <label>
+            <span>Имя: </span>
+            <input type="text" placeholder="Вася Пупкин" />
+          </label>
+        </li>
+        <li class="form__email">
+          <label>
+            <span>Email: </span>
+            <input type="text" id="#email" />
+          </label>
+        </li>
+        <li class="form__phone">
+          <label>
+            <span>Телефон: </span>
+            <input type="number" name="" id="#phone" />
+          </label>
+        </li>
+        <li class="form__city">
+          <label>
+            <span>Город: </span>
+            <input type="text" />
+          </label>
+        </li>
+        <li class="form__street">
+          <label>
+            <span>Улица: </span>
+            <input type="text" />
+          </label>
+        </li>
+      </ul>
+      <button class="form__button-submit">Отправить</button>
     </form>
+    <button class="add-user__button-close">Отмена</button>
   </section>
-  <script src="./js/main.js></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
