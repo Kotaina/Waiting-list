@@ -69,6 +69,33 @@
     </li>
   </template>
 
+  <template id="full-card__template">
+    <h2 class="full-card__name"></h2>
+    <ul class="full-card__parameters param">
+      <li>
+        Юзернейм: <span class="param__username"></span>
+      </li>
+      <li>
+        Email: <span class="param__email"></span>
+      </li>
+      <li>
+        Телефон: <span class="param__phone"></span>
+      </li>
+      <li>
+        Компания: <span class="param__company"></span>
+      </li>
+      <li>
+        Сайт: <span class="param__web"></span>
+      </li>
+      <li>
+        Адрес: <span class="param__zip"></span>,
+        <span class="param__city"></span>,
+        <span class="param__street"></span>,
+        <span class="param__suite"></span>.
+      </li>
+    </ul>
+  </template>
+
   <footer class="main-footer">
     <ul class="main-footer__social link">
       <li class="link__item link__item--git"> <a target="_blank" href="https://github.com/Kotaina">
@@ -138,9 +165,15 @@
     </form>
     <button class="add-user__button-close">Отмена</button>
   </section>
+
+  <section class="full-card visually-hidden">
+
+  </section>
+
   <script src="./js/main.js"></script>
   <script src="./js/validator.js"></script>
   <script src="./js/get-data.js"></script>
+  <script src="./js/full-card.js"></script>
   <!-- <script src="./js/server.js"></script> -->
   <script src="./js/template-worker.js"></script>
 </body>
