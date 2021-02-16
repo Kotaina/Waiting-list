@@ -2,6 +2,7 @@
 
 const requestURL = 'https://jsonplaceholder.typicode.com/users';
 let usersData = [];
+const clientCounter = document.querySelector(".client-count");
 
 function sendRequest(method, url) {
   return new Promise((resolve, reject) => {
@@ -22,9 +23,14 @@ function sendRequest(method, url) {
   })
 }
 
+function counter() {
+  clientCounter.textContent = "(" + usersData.length + ")";
+}
+
 sendRequest('GET', requestURL)
   .then(data => {
     usersData = data;
+    counter();
     renderCard(usersData);
   })
   .catch(err => console.log(err));

@@ -1,6 +1,5 @@
 const userTemplate = document.querySelector('#card-template');
 const usersList = document.querySelector('.users__list');
-const clientCounter = document.querySelector(".client-count");
 
 let createCard = function (user) {
   let card = userTemplate.content.cloneNode(true);
@@ -19,5 +18,3 @@ function renderCard(usersData) {
   }
   usersList.appendChild(fragment)
 }
-
-clientCounter.textContent = "(" + usersData.length + ")";
