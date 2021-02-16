@@ -1,4 +1,7 @@
+// XHR + Promise case
+
 const requestURL = 'https://jsonplaceholder.typicode.com/users';
+let usersData = [];
 
 function sendRequest(method, url) {
   return new Promise((resolve, reject) => {
@@ -21,7 +24,7 @@ function sendRequest(method, url) {
 
 sendRequest('GET', requestURL)
   .then(data => {
-    console.log(data);
-    usersData.push(data);
+    usersData = data;
+    renderCard(usersData);
   })
   .catch(err => console.log(err));
