@@ -101,36 +101,36 @@
 
   <section class="add-user visually-hidden">
     <h2 class="add-user__title">Новый пользователь</h2>
-    <form class="add-user__form">
+    <form class="add-user__form" autocomplete="off">
       <ul class="add-user__form__form-list form">
         <li class="form__name">
           <label>
             <span>Имя: </span>
-            <input type="text" id="#name" placeholder="Вася Пупкин" />
+            <input type="text" id="#name" placeholder="Вася Пупкин" name="userName" required />
           </label>
         </li>
         <li class="form__email">
           <label>
             <span>Email: </span>
-            <input type="text" id="#email" class="new-user-email" required />
+            <input type="text" id="#email" class="new-user-email" required name="userEmail" required />
           </label>
         </li>
         <li class="form__phone">
           <label>
             <span>Телефон: </span>
-            <input type="number" id="#phone" />
+            <input type="number" id="#phone" class="new-user-phone" name="userPhone" required />
           </label>
         </li>
         <li class="form__city">
           <label>
             <span>Город: </span>
-            <input type="text" id="#city" />
+            <input type="text" id="#city" name="userCity" minlength="2" required />
           </label>
         </li>
         <li class="form__street">
           <label>
             <span>Улица: </span>
-            <input type="text" id="#street" />
+            <input type="text" id="#street" name="userStreet" minlength="2" />
           </label>
         </li>
       </ul>
@@ -139,10 +139,10 @@
     <button class="add-user__button-close">Отмена</button>
   </section>
   <script src="./js/main.js"></script>
+  <script src="./js/validator.js"></script>
   <script src="./js/get-data.js"></script>
   <!-- <script src="./js/server.js"></script> -->
   <script src="./js/template-worker.js"></script>
-  <script src="./js/validator.js"></script>
 </body>
 
 </html>
