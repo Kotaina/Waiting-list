@@ -1,3 +1,5 @@
+// Only XHR case 
+
 const requestURL = 'https://jsonplaceholder.typicode.com/users';
 let serverData = [];
 let usersData = [];
