@@ -40,57 +40,108 @@
   <header>
     <h1 class="main-header__title">Клиент-лист</h1>
   </header>
+  <div class="main-container">
 
-  <section class="users">
-    <h1 class="users__title">Количество людей в очереди <span class="client-count"></span></h1>
-    <button class="users__new">Добавить</button>
-    <ul class="users__list user">
 
-    </ul>
-  </section>
+    <section class="users">
+      <h1 class="users__title">Количество людей в очереди <span class="client-count"></span></h1>
+      <button class="btn btn--add-user users__new">Добавить</button>
+      <ul class="users__list user">
 
-  <section class="add-user visually-hidden">
-    <h2 class="add-user__title">Новый пользователь</h2>
-    <form class="add-user__form" autocomplete="off">
-      <ul class="add-user__form__form-list form">
-        <li class="form__name">
-          <label>
-            <span>Имя: </span>
-            <input type="text" id="#name" placeholder="Вася Пупкин" name="userName" required />
-          </label>
-        </li>
-        <li class="form__email">
-          <label>
-            <span>Email: </span>
-            <input type="text" id="#email" class="new-user-email" required name="userEmail" required />
-          </label>
-        </li>
-        <li class="form__phone">
-          <label>
-            <span>Телефон: </span>
-            <input type="number" id="#phone" class="new-user-phone" name="userPhone" required />
-          </label>
-        </li>
-        <li class="form__city">
-          <label>
-            <span>Город: </span>
-            <input type="text" id="#city" name="userCity" minlength="2" required />
-          </label>
-        </li>
-        <li class="form__street">
-          <label>
-            <span>Улица: </span>
-            <input type="text" id="#street" name="userStreet" minlength="2" />
-          </label>
-        </li>
       </ul>
-      <button class="form__button-submit">Отправить</button>
-    </form>
-    <button class="add-user__button-close">Отмена</button>
-  </section>
+    </section>
 
-  <section class="full-card visually-hidden"></section>
+    <section class="add-user visually-hidden">
+      <h2 class="add-user__title">Новый пользователь</h2>
+      <form class="add-user__form" autocomplete="off">
+        <ul class="add-user__form__form-list form">
+          <li class="form__name">
+            <label>
+              <span>Имя: </span>
+              <input type="text" id="#name" placeholder="Вася Пупкин" name="userName" required />
+            </label>
+          </li>
+          <li class="form__email">
+            <label>
+              <span>Email: </span>
+              <input type="text" id="#email" class="new-user-email" required name="userEmail" required />
+            </label>
+          </li>
+          <li class="form__phone">
+            <label>
+              <span>Телефон: </span>
+              <input type="number" id="#phone" class="new-user-phone" name="userPhone" required />
+            </label>
+          </li>
+          <li class="form__city">
+            <label>
+              <span>Город: </span>
+              <input type="text" id="#city" name="userCity" minlength="2" required />
+            </label>
+          </li>
+          <li class="form__street">
+            <label>
+              <span>Улица: </span>
+              <input type="text" id="#street" name="userStreet" minlength="2" />
+            </label>
+          </li>
+        </ul>
+        <button class="btn btn--submit form__button-submit">Отправить</button>
+      </form>
+      <button class="btn btn--close-add-user add-user__button-close">Отмена</button>
+    </section>
 
+    <section class="full-card visually-hidden"></section>
+
+    <template id="card-template">
+      <li class="user__card user">
+        <h3 class="user__name" id=""></h3>
+        <ul>
+          <li>
+            Электронная почта:
+            <span class="user__email"></span>
+            </label>
+          <li>
+            Город:
+            <span class="user__city"></span>
+          </li>
+          <li>
+            Телефон:
+            <span class="user__phone"></span>
+          </li>
+        </ul>
+      </li>
+    </template>
+    <template id="full-card__template">
+      <section class="full-card-info">
+        <h2 class="full-card__name"></h2>
+        <ul class="full-card__parameters param">
+          <li>
+            Юзернейм: <span class="param__username"></span>
+          </li>
+          <li>
+            Email: <span class="param__email"></span>
+          </li>
+          <li>
+            Телефон: <span class="param__phone"></span>
+          </li>
+          <li>
+            Компания: <span class="param__company"></span>
+          </li>
+          <li>
+            Сайт: <span class="param__web"></span>
+          </li>
+          <li>
+            Адрес: <span class="param__zip"></span>,
+            <span class="param__city"></span>,
+            <span class="param__street"></span>,
+            <span class="param__suite"></span>.
+          </li>
+        </ul>
+        <button class="btn btn--close-full full-card__close">Закрыть</button>
+      </section>
+    </template>
+  </div>
   <footer class="main-footer">
     <ul class="main-footer__social link">
       <li class="link__item link__item--git"> <a target="_blank" href="https://github.com/Kotaina">
@@ -120,55 +171,6 @@
       </li>
     </ul>
   </footer>
-
-  <template id="card-template">
-    <li class="user__card user">
-      <h3 class="user__name" id=""></h3>
-      <ul>
-        <li>
-          Электронная почта:
-          <span class="user__email"></span>
-          </label>
-        <li>
-          Город:
-          <span class="user__city"></span>
-        </li>
-        <li>
-          Телефон:
-          <span class="user__phone"></span>
-        </li>
-      </ul>
-    </li>
-  </template>
-  <template id="full-card__template">
-    <section class="full-card-info">
-      <h2 class="full-card__name"></h2>
-      <ul class="full-card__parameters param">
-        <li>
-          Юзернейм: <span class="param__username"></span>
-        </li>
-        <li>
-          Email: <span class="param__email"></span>
-        </li>
-        <li>
-          Телефон: <span class="param__phone"></span>
-        </li>
-        <li>
-          Компания: <span class="param__company"></span>
-        </li>
-        <li>
-          Сайт: <span class="param__web"></span>
-        </li>
-        <li>
-          Адрес: <span class="param__zip"></span>,
-          <span class="param__city"></span>,
-          <span class="param__street"></span>,
-          <span class="param__suite"></span>.
-        </li>
-      </ul>
-      <button class="full-card__close">Закрыть</button>
-    </section>
-  </template>
 </body>
 
 <script src="./js/main.js"></script>
